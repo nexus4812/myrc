@@ -23,7 +23,6 @@ alias sc='screen'
 alias ps='ps --sort=start_time'
 alias du='du -h -d=1'
 
-
 # alias translate
 alias trans="trans {en=ja} "
 
@@ -49,8 +48,8 @@ source ~/.git-prompt.sh
 export PS1='[\h@\e[36m\]\w\[\e[m\]]\[\e[1;32m $(__git_ps1 "(%s)") \[\e[0m\]\$ '
 
 #bash config
-alias bc='vim /Users/my/.bashrc'
-alias bcr='. /Users/my/.bashrc'
+alias zshrc='vim /Users/my/.zshrc'
+alias zshrc-reload='. /Users/my/.zshrc'
 
 # git
 # alias git
