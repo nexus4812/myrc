@@ -1,0 +1,6 @@
+bash-completion
+composer
+gh
+jq
+tig
+php@8.0
