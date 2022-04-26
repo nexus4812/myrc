@@ -43,9 +43,19 @@ alias dimg='docker images'
 alias python="python3"
 alias pip="pip3"
 
-# CLI
 source ~/.git-prompt.sh
-export PS1='[\h@\e[36m\]\w\[\e[m\]]\[\e[1;32m $(__git_ps1 "(%s)") \[\e[0m\]\$ '
+
+# CLI
+setopt prompt_subst
+TMOUT=1
+TRAPALRM() {zle reset-prompt}
+RPROMPT="%F{white} %D{%Y-%m-%d %H:%M:%S} %f"
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
+\$ '
 
 #bash config
 alias zshrc='vim /Users/my/.zshrc'
