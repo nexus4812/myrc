@@ -24,7 +24,7 @@ alias ps='ps --sort=start_time'
 alias du='du -h -d=1'
 
 # alias translate
-alias trans="trans {en=ja} "
+alias tra="trans {en=ja} "
 
 # alias chrome 
 alias chrome="open -a '/Applications/Google Chrome.app'"
