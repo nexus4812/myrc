@@ -64,21 +64,21 @@ alias zshrc-reload='. /Users/my/.zshrc'
 
 # git
 # alias git
-alias pull='git pull'
-alias push='git push'
-alias st='git status'
+alias g='git '
+alias gll='git log --graph --pretty=oneline'
+alias gdiff='git diff --name-only | peco | xargs git diff'
 alias sts='git status -sb'
-alias stv='git status -v'
-alias diff='git diff --name-only | peco | xargs git diff'
-alias difff='git diff --word-diff'
 alias add='git add'
-alias addi='git add -i'
-alias cm='git commit'
+alias co='git commit'
 alias br='git branch'
+alias brr='git branch -r'
 alias brd='git branch --merged|egrep -v "\*|develop|main|master"|xargs git branch -d'
-alias ck='git checkout'
-alias submodule-update='git submodule update'
 
+alias ch='git checkout'
+alias chbr='git checkout $(git branch | peco)'
+alias chbrr='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep -v -- "->" | peco | sed -e "s%remotes/origin/%%")'
+
+# phpstan
 alias stan-diff="git diff develop --name-only | grep '.php' | xargs vendor/bin/phpstan analyse -l max"
 alias stan-diff-add="git diff develop --diff-filter=A --name-only | grep '.php' | xargs vendor/bin/phpstan analyse -l max"
 
