@@ -22,6 +22,7 @@ alias cp='cp -i'
 alias sc='screen'
 alias ps='ps --sort=start_time'
 alias du='du -h -d=1'
+alias cdpj='cd ~/Documents/$(ls -1 ~/Documents | peco)'
 
 # alias translate
 alias tra="trans {en=ja} "
