@@ -57,9 +57,9 @@ GIT_PS1_SHOWUPSTREAM=auto
 setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
 \$ '
 
-#bash config
-alias zshrc='vim /Users/my/.zshrc'
-alias zshrc-reload='. /Users/my/.zshrc'
+# zshrc config
+alias zs='vim /Users/my/.zshrc'
+alias zsr='. /Users/my/.zshrc'
 
 # git
 # alias git
