@@ -13,7 +13,6 @@ export PATH="/usr/local/opt/git/bin:$PATH"
 # bash_completion.sh
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-
 # alias
 alias ll='ls -la --color=auto'
 alias mv='mv -i'
@@ -77,6 +76,9 @@ alias brd='git branch --merged|egrep -v "\*|develop|main|master"|xargs git branc
 alias ch='git checkout'
 alias chbr='git checkout $(git branch | peco)'
 alias chbrr='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep -v -- "->" | peco | sed -e "s%remotes/origin/%%")'
+
+# alias tig
+alias ts='tig status'
 
 # phpstan
 alias stan-diff="git diff develop --name-only | grep '.php' | xargs vendor/bin/phpstan analyse -l max"
