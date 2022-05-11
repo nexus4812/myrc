@@ -23,3 +23,8 @@ $ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/vim/.vimrc >>
 # brew 
 $ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/brew/brew.txt | xargs -I {} brew install {}
 ```
+
+## Update brew dependencies 
+```bash
+$ rm -f brew/brew.txt && brew leaves >> brew/brew.txt
+```
