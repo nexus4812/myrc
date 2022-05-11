@@ -61,6 +61,10 @@ setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%
 alias zs='vim /Users/my/.zshrc'
 alias zsr='. /Users/my/.zshrc'
 
+# brew
+alias brew-du='brew leaves | xargs brew info | grep "*"'
+alias brew-l='brew leaves'
+
 # git
 # alias git
 alias g='git '
