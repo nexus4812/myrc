@@ -4,6 +4,7 @@ clamav
 composer
 coreutils
 ffmpeg
+fzf
 gh
 git
 graphviz
