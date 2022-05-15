@@ -91,6 +91,7 @@ alias chbrr='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep 
 
 # alias tig
 alias ts='tig status'
+alias tbr='tig refs'
 
 # phpstan
 alias stan-diff="git diff develop --name-only | grep '.php' | xargs vendor/bin/phpstan analyse -l max"
