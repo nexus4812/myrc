@@ -22,6 +22,8 @@ alias sc='screen'
 alias ps='ps --sort=start_time'
 alias du='du -h -d=1'
 alias cdpj='cd ~/Documents/$(ls -1 ~/Documents | peco)'
+alias mem='top -o rsize'
+alias cpu='top -o cpu'
 
 # alias translate
 alias tra="trans {en=ja} "
