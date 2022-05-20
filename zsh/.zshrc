@@ -25,6 +25,21 @@ alias cdpj='cd ~/Documents/$(ls -1 ~/Documents | peco)'
 alias mem='top -o rsize'
 alias cpu='top -o cpu'
 
+# alias lf
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
+
 # alias translate
 alias tra="trans {en=ja} "
 
