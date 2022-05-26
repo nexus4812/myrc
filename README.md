@@ -6,19 +6,20 @@ Set up dotfiles
 
 ```bash
 $ git clone git@github.com:nexus4812/myrc.git
+$ cd myrc
 
 # .zshrc
-$ ln -s $(realpath myrc/zsh/.zshrc) ~
+$ ln -s $(realpath shell/.zshrc) ~
 
 # .vimrc
-$ ln -s $(realpath myrc/zsh/.vimrc) ~
+$ ln -s $(realpath vim/.vimrc) ~
 ```
 
 ## Usage (Overwrite)
 
 ```bash
-# .zshrc
-$ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/zsh/.zshrc >> ~/.zshrc
+# .bashrc or .zshrc
+$ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/shell/slim.sh >> ~/.zshrc # or ~/.bashrc
 
 # .vimrc
 $ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/vim/.vimrc >> ~/.vimrc
