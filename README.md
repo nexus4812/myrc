@@ -1,8 +1,10 @@
 # myrc
+
 Set up dotfiles
 
 ## Usage (Symbolic link)
-```bash 
+
+```bash
 $ git clone git@github.com:nexus4812/myrc.git
 
 # .zshrc
@@ -13,6 +15,7 @@ $ ln -s $(realpath myrc/zsh/.vimrc) ~
 ```
 
 ## Usage (Overwrite)
+
 ```bash
 # .zshrc
 $ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/zsh/.zshrc >> ~/.zshrc
@@ -20,11 +23,12 @@ $ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/zsh/.zshrc >>
 # .vimrc
 $ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/vim/.vimrc >> ~/.vimrc
 
-# brew 
+# brew
 $ curl -fsSl https://raw.githubusercontent.com/nexus4812/myrc/main/brew/brew.txt | xargs -I {} brew install {}
 ```
 
-## Update brew dependencies 
+## Update brew dependencies
+
 ```bash
-$ rm -f brew/brew.txt && brew leaves >> brew/brew.txt
+$ source brew/update.sh
 ```
