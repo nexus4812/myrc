@@ -1,0 +1,10 @@
+# write only default commands
+alias ll='ls -la --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias sc='screen'
+alias ps='ps --sort=start_time'
+alias du='du -h -d=1'
+alias mem='top -o rsize'
+alias cpu='top -o cpu'
