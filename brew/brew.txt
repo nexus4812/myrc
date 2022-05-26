@@ -13,9 +13,11 @@ jq
 lf
 libmetalink
 nghttp2
+nvm
 peco
 php@8.0
 pyenv
+python@3.10
 python@3.8
 tig
 tmux
