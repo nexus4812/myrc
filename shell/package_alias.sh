@@ -55,14 +55,16 @@ alias stan-diff-add="git diff develop --diff-filter=A --name-only | grep '.php' 
 fi
 
 # alias gh
-if type "tig" > /dev/null 2>&1; then
+if type "gh" > /dev/null 2>&1; then
 alias browse='gh browse'
 alias pr='gh pr view --web'
 alias pr-create='gh pr create -w'
 fi
 
 # alias translate
+if type "trans" > /dev/null 2>&1; then
 alias tra="trans {en=ja} "
+fi
 
 # alias chrome 
 alias chrome="open -a '/Applications/Google Chrome.app'"
