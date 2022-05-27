@@ -13,6 +13,9 @@ $ ln -s $(realpath shell/.zshrc) ~
 
 # .vimrc
 $ ln -s $(realpath vim/.vimrc) ~
+
+# lfrc
+ln -s $(realpath lf/lfrc) ~/.config/lf
 ```
 
 ## Usage (Overwrite)
