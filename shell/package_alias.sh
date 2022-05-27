@@ -90,4 +90,5 @@ fi
 # alias peco
 if type "peco" > /dev/null 2>&1; then
 alias cdpj='cd ~/Documents/$(ls -1 ~/Documents | peco)'
+alias browsepj='$(cdpj; browse)'
 fi
