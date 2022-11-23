@@ -4,7 +4,7 @@ DIR=$(dirname $(readlink  ~/.zshrc))
 . $DIR/package_alias.sh
 
 # zshrc config
-alias zs='vim ~/.zshrc'
+alias zs='vim ~/Documents/myrc/shell/$(ls -1  ~/Documents/myrc/shell/ | peco)'
 alias zsr='source ~/.zshrc'
 
 # prompt option
