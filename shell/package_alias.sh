@@ -29,12 +29,20 @@ alias ts='tig status'
 alias tbr='tig refs'
 fi
 
+
+if type "composer" > /dev/null 2>&1; then
+  function cr () {
+    composer $1 $2 $3 $4
+  }
+fi
+
 # alias git
 if type "git" > /dev/null 2>&1; then
 alias g='git '
 alias gll='git log --graph --pretty=oneline'
 alias gdiff='git diff --name-only | peco | xargs git diff'
 alias sts='git status -sb'
+alias wip='git add . && git commit -m"wip"'
 alias add='git add'
 alias co='git commit'
 alias br='git branch'
@@ -64,6 +72,7 @@ fi
 # alias translate
 if type "trans" > /dev/null 2>&1; then
 alias tra="trans {en=ja} "
+alias traa="trans {ja=en} "
 fi
 
 # alias chrome 
