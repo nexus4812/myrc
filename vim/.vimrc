@@ -6,6 +6,9 @@
 " > step 2
 " :PlugInstall
 
+" leader key map
+let mapleader = "\<SPACE>"
+
 " vim-plug
 call plug#begin()
 Plug 'tpope/vim-sensible'
@@ -29,6 +32,8 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
+
+nnoremap <leader>t :!tig status<CR>
 
 " For vim-gitgutter
 let g:gitgutter_override_sign_column_highlight = 1
