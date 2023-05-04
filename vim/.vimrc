@@ -13,6 +13,7 @@ Plug 'vim-jp/vimdoc-ja'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
+Plug 'pechorin/any-jump.vim'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
