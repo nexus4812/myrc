@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'pechorin/any-jump.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'iberianpig/tig-explorer.vim' " https://github.com/iberianpig/tig-explorer.vim
 call plug#end()
 
 " For vimdoc-ja
@@ -33,10 +34,28 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 
-nnoremap <leader>t :!tig status<CR>
 
-" For vim-gitgutter
-let g:gitgutter_override_sign_column_highlight = 1
+" For Tig
+" open tig with current file
+nnoremap <leader>T :TigOpenCurrentFile<CR>
+
+" open tig with Project root path
+nnoremap <leader>t :TigOpenProjectRootDir<CR>
+
+" open tig grep
+nnoremap <leader>g :TigGrep<CR>
+
+" resume from last grep
+nnoremap <leader>r :TigGrepResume<CR>
+
+" open tig grep with the selected word
+vnoremap <leader>g y:TigGrep<Space><C-R>"<CR>
+
+" open tig grep with the word under the cursor
+nnoremap <leader>cg :<C-u>:TigGrep<Space><C-R><C-W><CR>
+
+" open tig blame with current file
+nnoremap <leader>b :TigBlame<CR>
 
 " -------------------------------
 
