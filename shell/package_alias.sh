@@ -15,6 +15,9 @@ lfcd () {
 }
 fi
 
+# for act command @see https://github.com/nektos/act/issues/1051#issuecomment-1732542268
+export DOCKER_HOST=$(docker context inspect | jq -r '.[0].Endpoints.docker.Host')
+
 # alias brew
 if type "brew" > /dev/null 2>&1; then
 # use homebrew git package
