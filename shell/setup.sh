@@ -3,6 +3,9 @@ readfile() {[ -r $1 ] && . $1 }
 readfile "/usr/local/etc/profile.d/bash_completion.sh"
 readfile "$HOME/.git-prompt.sh"
 
+# brew
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 readfile "/usr/local/opt/nvm/nvm.sh" # This loads nvm
