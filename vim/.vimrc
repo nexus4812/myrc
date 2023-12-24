@@ -5,7 +5,10 @@
 " 
 " > step 2
 " :PlugInstall
-
+"
+" > step 3 
+" :CocInstall coc-phpls
+"
 " leader key map
 let mapleader = "\<SPACE>"
 
@@ -19,6 +22,7 @@ Plug 'preservim/nerdtree'
 Plug 'pechorin/any-jump.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'iberianpig/tig-explorer.vim' " https://github.com/iberianpig/tig-explorer.vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " For vimdoc-ja
