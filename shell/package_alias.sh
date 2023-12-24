@@ -18,6 +18,12 @@ fi
 # for act command @see https://github.com/nektos/act/issues/1051#issuecomment-1732542268
 export DOCKER_HOST=$(docker context inspect | jq -r '.[0].Endpoints.docker.Host')
 
+
+# alias vim
+alias vimrc="vim ~/.vimrc"
+
+alias kube="kubectl $@"
+
 # alias brew
 if type "brew" > /dev/null 2>&1; then
 # use homebrew git package
@@ -25,6 +31,11 @@ export PATH="/usr/local/opt/git/bin:$PATH"
 alias brew-du='brew leaves | xargs brew info | grep "*"'
 alias brew-l='brew leaves'
 fi
+
+
+# alias tmux
+alias tm="tmux"
+alias tmr="tmux selectp -R"
 
 # alias tig
 if type "tig" > /dev/null 2>&1; then
@@ -45,6 +56,7 @@ alias g='git '
 alias gll='git log --graph --pretty=oneline'
 alias gdiff='git diff --name-only | peco | xargs git diff'
 alias sts='git status -sb'
+alias stl='git diff --cached'
 alias wip='git add . && git commit -m"wip"'
 alias add='git add'
 alias co='git commit'
@@ -85,18 +97,13 @@ function chrome-search() { open -a '/Applications/Google Chrome.app' "https://ww
 
 # alias docker
 if type "docker" > /dev/null 2>&1; then
-alias dakill='docker ps -aq | xargs docker kill'
-alias darmi='docker images -aq | xargs docker rmi' # docker all rmi
-alias darm='docker ps -aq | xargs docker rm'      # docker all rm 
-alias dps='docker ps --format "{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Command}}\t{{.RunningFor}}"'
-alias dexec='docker exec -it $(dps | peco | cut -f 1) bash'
-alias dimg='docker images'
+function dc() { docker-compose $1 $2 $3 $4 $5 }
 fi
 
 # alias python
 if type "python3" > /dev/null 2>&1; then
-alias python="python3"
-alias pip="pip3"
+alias python="/usr/local/bin/python3.11"
+alias pip="pip3.11"
 fi
 
 # alias peco
