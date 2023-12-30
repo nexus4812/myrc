@@ -16,6 +16,9 @@ $ ln -s $(realpath vim/.vimrc) ~
 
 # lfrc
 ln -s $(realpath lf/lfrc) ~/.config/lf
+
+# tmux
+ln -s $(realpath .tmux.conf) ~
 ```
 
 ## Usage (Overwrite)
