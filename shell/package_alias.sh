@@ -69,9 +69,7 @@ alias chbrr='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep 
 alias pull-force='git fetch && git reset --hard $(git rev-parse --abbrev-ref --symbolic-full-name @{u})'
 alias ckbr='git checkout $(git branch | peco)'
 alias ckbrr='git checkout $(git branch -a --sort=-authordate | cut -b 3- | grep -v -- "->" | peco | sed -e "s%remotes/origin/%%")'
-alias diff-develop='git diff develop $(git rev-parse --abbrev-ref HEAD) --name-only | peco | xargs git diff develop $(git rev-parse --abbrev-ref HEAD)'
-alias brp="git show-branch | grep '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed 's/.*\[\(.*\)\].*/\1/' | sed 's/[\^~].*//'"
-alias diff-file-name='git diff $(brp) $(git rev-parse --abbrev-ref HEAD) --name-only'
+alias dcs='git diff --cached --stat'
 # phpstan
 alias stan-diff="git diff develop --name-only | grep '.php' | xargs vendor/bin/phpstan analyse -l max"
 alias stan-diff-add="git diff develop --diff-filter=A --name-only | grep '.php' | xargs vendor/bin/phpstan analyse -l max"
